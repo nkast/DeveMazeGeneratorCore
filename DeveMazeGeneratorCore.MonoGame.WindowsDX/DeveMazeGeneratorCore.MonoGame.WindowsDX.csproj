@@ -4,6 +4,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <PublishReadyToRun>false</PublishReadyToRun>
     <TieredCompilation>false</TieredCompilation>
+    <MonogamePlatform>Windows</MonogamePlatform>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -18,10 +19,10 @@
     <TrimmerRootAssembly Include="Microsoft.Xna.Framework.Content.ContentTypeReader" Visible="false" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.0.1641" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\kniEngine\kni\MonoGame.Framework\MonoGame.Framework.WindowsDX.csproj" />
     <ProjectReference Include="..\DeveMazeGeneratorCore.MonoGame.Core\DeveMazeGeneratorCore.MonoGame.Core.csproj" />
   </ItemGroup>
   <ItemGroup>

@@ -4,12 +4,10 @@
 		<Platforms>AnyCPU;x64</Platforms>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
-			<PrivateAssets>All</PrivateAssets>
-		</PackageReference>
 		<PackageReference Include="System.Text.Json" Version="6.0.5" />
 	</ItemGroup>
 	<ItemGroup>
+	  <ProjectReference Include="..\..\kniEngine\kni\MonoGame.Framework\MonoGame.Framework.DesktopGL.csproj" />
 	  <ProjectReference Include="..\DeveMazeGeneratorCore\DeveMazeGeneratorCore.csproj" />
 	</ItemGroup>
 </Project>

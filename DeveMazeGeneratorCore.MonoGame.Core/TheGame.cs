@@ -368,7 +368,7 @@ namespace DeveMazeGeneratorMonoGame
             vertexBufferPath.SetData(vertices);
 
 
-            if (game.GraphicsDevice.GraphicsProfile == GraphicsProfile.Reach)
+            if (GraphicsDevice.GraphicsProfile == GraphicsProfile.Reach)
             {
                 indexBufferPath = new IndexBuffer(GraphicsDevice, IndexElementSize.SixteenBits, indices.Length, BufferUsage.WriteOnly);
                 if (indices.Any(t => t > short.MaxValue))

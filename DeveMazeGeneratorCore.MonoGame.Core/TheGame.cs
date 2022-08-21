@@ -319,7 +319,7 @@ namespace DeveMazeGeneratorMonoGame
             vertexBuffer = new VertexBuffer(GraphicsDevice, VertexPositionNormalTexture.VertexDeclaration, vertices.Length, BufferUsage.WriteOnly);
             vertexBuffer.SetData(vertices);
 
-            if (Platform == Platform.Blazor)
+            if (GraphicsDevice.GraphicsProfile == GraphicsProfile.Reach)
             {
                 indexBuffer = new IndexBuffer(GraphicsDevice, IndexElementSize.SixteenBits, indices.Length, BufferUsage.WriteOnly);
                 if (indices.Any(t => t > short.MaxValue))
@@ -368,7 +368,7 @@ namespace DeveMazeGeneratorMonoGame
             vertexBufferPath.SetData(vertices);
 
 
-            if (Platform == Platform.Blazor)
+            if (game.GraphicsDevice.GraphicsProfile == GraphicsProfile.Reach)
             {
                 indexBufferPath = new IndexBuffer(GraphicsDevice, IndexElementSize.SixteenBits, indices.Length, BufferUsage.WriteOnly);
                 if (indices.Any(t => t > short.MaxValue))
